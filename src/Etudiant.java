@@ -1,4 +1,4 @@
-public class Etudiant {
+public abstract class Etudiant {
     protected  int identifiant;
     protected String nom;
     protected String prenom;
@@ -12,20 +12,28 @@ public class Etudiant {
     }
     //2
     public boolean equals(Object obj) {
-        if (obj instanceof Etudiant) {
-            Etudiant etudiant = (Etudiant) obj;
-            return this.identifiant == etudiant.identifiant;
-        }
-        return false;
+if (obj == null) return false;
+        if (obj == this) return true;
+        if( obj.getClass() != this.getClass()) return false;
+
+        Etudiant et = (Etudiant) obj;
+        if (et.identifiant == this.identifiant && et.nom == this.nom ) {
+             
+            return true;
+        }return false;
+        // if (obj instanceof Etudiant) {
+        //     Etudiant etudiant = (Etudiant) obj;
+        //     return this.identifiant == etudiant.identifiant;
+        // }
+        // return false;
     }
+
     public String toString() {
         return "Etudiant " + this.identifiant + " : " + this.nom + " " + this.prenom + " (" + this.moyenne + ")";
     }
 
 
-    public void ajouterUneAbsence() {
-        System.out.println("Absence ajoutée");
-    }
+    public abstract void ajouterUneAbsence();
     public int getIdentifiant() {
         return identifiant;
     }

@@ -7,8 +7,16 @@ public class Etudiant3eme extends Etudiant {
         this.branche = branche;
     }
 
+    //getter 
+    public String getBranche() {
+        return branche;
+    }
+
     public void ajouterUneAbsence() {
         moyenne = moyenne - 0.5f;
     }
-   
+   public String toString() {
+       return "Etudiant "+super.toString()+"branche"+this.branche;
+       
+   }
 }

@@ -10,9 +10,16 @@ public class EtudiantAlternance extends Etudiant {
 salaire = salaire - 50;     }
 
 public String toString() {
-        return "Etudiant " + this.identifiant + " : " + this.nom + " " + this.prenom + " (" + this.moyenne + ") " + this.salaire;
-    }
+    return "Etudaint "+super.toString()+"salaire"+this.salaire;
     
+}
+
+
+//getters 
+public int getSalaire() {
+    return salaire;
+}
+
 }
 
 
