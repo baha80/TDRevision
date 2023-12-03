@@ -4,7 +4,7 @@ public class Etudiant3eme extends Etudiant {
     public Etudiant3eme(int identifiant, String nom, 
     String prenom, float moyenne, String branch) {
         super(identifiant, nom, prenom, moyenne);
-        this.branche = branche;
+        //this.branche = branche;
     }
 
     //getter 

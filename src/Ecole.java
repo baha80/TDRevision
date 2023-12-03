@@ -1,7 +1,7 @@
 public class Ecole {
     public String nom;
     private Etudiant[] tableauEtudiants;
-    private final int nombreEtudiants =500;
+   // private final int nombreEtudiants =500;
     public int comp = 0;
 
 
